@@ -25,14 +25,14 @@ public class Student {
     String department;
 
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "student_course_tbl",
             joinColumns = {
-                    @JoinColumn(name = "s_id",referencedColumnName = "id")
+                    @JoinColumn(name = "s_id", referencedColumnName = "id")
             },
             inverseJoinColumns = {
-                    @JoinColumn(name = "c_id",referencedColumnName = "id")
+                    @JoinColumn(name = "c_id", referencedColumnName = "id")
             }
     )
     private List<Course> courses;

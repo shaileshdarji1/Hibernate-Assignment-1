@@ -1,18 +1,19 @@
 package com.hibernate.manytomany.service;
 
+import com.hibernate.manytomany.dto.CourseDto;
 import com.hibernate.manytomany.entity.Course;
 
 import java.util.List;
 
 public interface CourseService {
 
-    public Course addCourse(Course course);
+    public CourseDto addCourse(CourseDto courseDto);
 
-    public List<Course> getCourses();
+    public List<CourseDto> getCourses();
 
-    public Course updateCourse(Course course);
+    public CourseDto updateCourse(CourseDto courseDto,Integer id);
 
     public void deleteCourse(Integer id);
 
-    public Course findCourseById(Integer id);
+    public CourseDto findCourseById(Integer id);
 }

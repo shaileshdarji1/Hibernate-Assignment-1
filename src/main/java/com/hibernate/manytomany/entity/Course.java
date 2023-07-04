@@ -25,7 +25,7 @@ public class Course {
     private int modules;
     private double fee;
 
-    @ManyToMany(mappedBy = "courses",cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "courses")
     @JsonIgnore
     @ToString.Exclude
     private List<Student> students;

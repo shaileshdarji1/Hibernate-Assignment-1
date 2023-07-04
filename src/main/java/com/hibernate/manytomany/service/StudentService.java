@@ -1,18 +1,19 @@
 package com.hibernate.manytomany.service;
 
+import com.hibernate.manytomany.dto.StudentDto;
 import com.hibernate.manytomany.entity.Student;
 
 import java.util.List;
 
 public interface StudentService {
 
-    public Student addStudent(Student student);
+    public StudentDto addStudent(StudentDto studentDto);
 
-    public List<Student> getStudents();
+    public List<StudentDto> getStudents();
 
-    public Student updateStudent(Student student);
+    public StudentDto updateStudent(StudentDto studentDto,Integer id);
 
     public void deleteStudent(Integer id);
 
-    public Student findStudentById(Integer id);
+    public StudentDto findStudentById(Integer id);
 }
